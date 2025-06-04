@@ -5,6 +5,14 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+"app-domain@workspace:domain":
+  version: 0.0.0-use.local
+  resolution: "app-domain@workspace:domain"
+  dependencies:
+    typescript: "npm:^5.8.3"
+  languageName: unknown
+  linkType: soft
+
 "clean_architecture_template@workspace:.":
   version: 0.0.0-use.local
   resolution: "clean_architecture_template@workspace:."
