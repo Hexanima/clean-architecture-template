@@ -1,4 +1,2 @@
-export interface Prueba {
-    date: Date
-    name: string
-}
+export * from "./entities/index.js"
+export * from "./types/index.js"
