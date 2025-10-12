@@ -1,0 +1,10 @@
+{
+  "name": "api",
+  "packageManager": "yarn@4.9.1",
+  "dependencies": {
+    "app-domain": "workspace:^"
+  },
+  "scripts": {
+    "build": "echo \"CAMBIAR ESTO\""
+  }
+}
