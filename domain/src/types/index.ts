@@ -1,1 +1,2 @@
-export * from "./uuid.js"
+export * from "./uuid.js";
+export * from "./entity.js";
