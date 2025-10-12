@@ -7,10 +7,9 @@
   "type": "module",
   "module": "dist/index.js",
   "main": "dist/index.js",
-  "exports":{
+  "exports": {
     ".": "./dist/index.js"
   },
-  "private": "true",
   "scripts": {
     "build": "tsc -p tsconfig.build.json"
   },
