@@ -5,6 +5,12 @@
     "app-domain": "workspace:^"
   },
   "scripts": {
-    "build": "echo \"CAMBIAR ESTO\""
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsx watch src/app.ts",
+    "start": "node dist/src/app.js",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.4"
   }
 }

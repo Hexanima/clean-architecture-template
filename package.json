@@ -10,6 +10,9 @@
     "typescript": "^5.8.3"
   },
   "scripts": {
-    "build": "yarn workspaces foreach --all -pt run build"
+    "fe": "yarn workspaces foreach -vvpA --exclude '.'",
+    "fet": "yarn fe --topological",
+    "test": "yarn fe --exclude 'packages/templates/*' run test --run --clearScreen false",
+    "build": "yarn fet --exclude 'packages/templates/*' run build"
   }
 }
