@@ -1,34 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { FilterOperators, isOk, ok } from 'app-domain'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+const domainStatus = isOk(ok(FilterOperators.Eq)) ? 'ready' : 'error'
 
+function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <main className="app-shell">
+      <section className="status-panel">
+        <p className="eyebrow">TypeScript monorepo</p>
+        <h1>Clean Architecture Template</h1>
+        <dl>
+          <div>
+            <dt>Domain layer</dt>
+            <dd>{domainStatus}</dd>
+          </div>
+          <div>
+            <dt>Dependency rule</dt>
+            <dd>inward</dd>
+          </div>
+          <div>
+            <dt>Result contract</dt>
+            <dd>discriminated</dd>
+          </div>
+        </dl>
+        <p className="domain-check">Domain layer: {domainStatus}</p>
+      </section>
+    </main>
   )
 }
 

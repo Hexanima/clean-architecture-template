@@ -5,6 +5,6 @@ export default defineConfig({
         coverage: {
             exclude: ["**/index.ts"],
         },
-        passWithNoTests: true,
+        passWithNoTests: false,
     },
 });

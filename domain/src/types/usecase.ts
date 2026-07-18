@@ -1,5 +1,5 @@
-import { TaggedError } from "./error.js";
-import { AsyncResult } from "./result.js";
+import type { TaggedError } from "./error.js";
+import type { AsyncResult } from "./result.js";
 
 export interface UseCase<
   TDependencies,

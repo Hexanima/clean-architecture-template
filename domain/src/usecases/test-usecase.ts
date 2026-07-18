@@ -1,4 +1,5 @@
-import { UseCase } from "../types/usecase.js";
+import { ok } from "../types/result.js";
+import type { UseCase } from "../types/usecase.js";
 
 export interface TestUseCaseResult {
   testVar: boolean;
@@ -6,6 +7,6 @@ export interface TestUseCaseResult {
 
 export const testUseCase: UseCase<void, void, TestUseCaseResult, never> = {
   execute: async () => {
-    return { testVar: false } satisfies TestUseCaseResult;
+    return ok({ testVar: false } satisfies TestUseCaseResult);
   },
 };

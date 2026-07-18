@@ -1,42 +1,61 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  min-height: 100vh;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  background: #f6f7f9;
+  color: #18202f;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.status-panel {
+  width: min(760px, 100%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.eyebrow {
+  margin: 0 0 8px;
+  color: #4b6b7a;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
-.card {
-  padding: 2em;
+h1 {
+  margin: 0 0 24px;
+  font-size: clamp(2rem, 8vw, 4rem);
+  line-height: 1;
 }
 
-.read-the-docs {
-  color: #888;
+dl {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+
+dl > div {
+  border: 1px solid #d6dde3;
+  border-radius: 8px;
+  padding: 16px;
+  background: #ffffff;
+}
+
+dt {
+  color: #667582;
+  font-size: 0.875rem;
+}
+
+dd {
+  margin: 4px 0 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.domain-check {
+  margin: 20px 0 0;
+  color: #286053;
+  font-weight: 700;
 }
